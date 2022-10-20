@@ -1,0 +1,38 @@
+@mixin displayFlex($direction: row, $center: false) {
+	display: flex;
+	flex-direction: $direction;
+	@if ($center) {
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@mixin textBoxPadding($top: 0.5rem, $left: 1rem) {
+	padding: $top $left;
+}
+
+@mixin fitBox {
+	height: 100%;
+	width: 100%;
+}
+
+@mixin squareBox($size, $circle: false) {
+	height: $size;
+	width: $size;
+	@if ($circle) {
+		border-radius: 50%;
+	}
+}
+
+@mixin Base {
+	position: relative;
+}
+@mixin BaseOverlay($opacity: 0.4) {
+	height: inherit;
+	width: inherit;
+	opacity: $opacity;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 0;
+}

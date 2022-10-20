@@ -1,0 +1,20 @@
+.SquareButton {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: white;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: black;
+  border: 1px solid black;
+}
+.SquareButton:hover {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}/*# sourceMappingURL=SquareButton.css.map */

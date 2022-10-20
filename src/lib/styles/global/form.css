@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  overflow-y: auto;
+  padding: 2rem;
+}
+.form .form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5rem;
+}
+.form .form-row--multilined {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=form.css.map */

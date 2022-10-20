@@ -1,0 +1,32 @@
+@use "../../lib/styles/" as *;
+
+.PatientChart {
+	@include fitBox();
+	overflow: hidden;
+	background-color: white;
+	opacity: 0;
+	padding-bottom: $modalMargin;
+	.PatientChart__header-container {
+		@include displayFlex(row);
+		align-items: center;
+		background-color: black;
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin: $modalMargin $modalMargin 0 $modalMargin;
+		padding: 1rem 2rem;
+
+		.PatientChart__header-icon {
+			font-size: 3rem;
+		}
+		.PatientChart__add-patient {
+			margin-left: 3rem;
+			color: gold;
+			cursor: pointer;
+		}
+
+		.PatientChart__search {
+			margin-left: auto;
+		}
+	}
+}

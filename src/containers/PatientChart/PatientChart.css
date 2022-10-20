@@ -1,0 +1,30 @@
+.PatientChart {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  opacity: 0;
+  padding-bottom: 3px;
+}
+.PatientChart .PatientChart__header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 3px 3px 0 3px;
+  padding: 1rem 2rem;
+}
+.PatientChart .PatientChart__header-container .PatientChart__header-icon {
+  font-size: 3rem;
+}
+.PatientChart .PatientChart__header-container .PatientChart__add-patient {
+  margin-left: 3rem;
+  color: gold;
+  cursor: pointer;
+}
+.PatientChart .PatientChart__header-container .PatientChart__search {
+  margin-left: auto;
+}/*# sourceMappingURL=PatientChart.css.map */

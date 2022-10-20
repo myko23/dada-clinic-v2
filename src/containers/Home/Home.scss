@@ -1,0 +1,13 @@
+@use "../../lib/styles/" as *;
+.Home {
+	@include fitBox();
+	@include displayFlex(column, true);
+	position: relative;
+
+	.Home__PatientData-container {
+		@include fitBox();
+		padding: 2rem;
+		z-index: 1;
+		overflow: hidden;
+	}
+}

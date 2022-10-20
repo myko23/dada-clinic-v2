@@ -1,0 +1,47 @@
+.ViewConsultation {
+  height: 100%;
+  width: 100%;
+  padding: 3px;
+  background-color: white;
+  opacity: 0;
+}
+.ViewConsultation .ViewConsultation__form-container {
+  gap: 6rem;
+}
+
+.ViewConsultation__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ViewConsultation__container .ViewConsultation__header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 2rem;
+}
+.ViewConsultation__container .ViewConsultation__header-container .ViewConsultation__patient-title {
+  margin-left: auto;
+}
+.ViewConsultation__container .ViewConsultation__button-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  padding: 1rem;
+  background-color: black;
+  gap: 1rem;
+  align-items: center;
+}
+.ViewConsultation__container .ViewConsultation__button-container .ViewConsultation__button {
+  font-size: 3rem;
+  white-space: nowrap;
+  width: 25rem;
+}
+.ViewConsultation__container .ViewConsultation__button-container .ViewConsultation__button--back {
+  margin-left: auto;
+}/*# sourceMappingURL=ViewConsultation.css.map */

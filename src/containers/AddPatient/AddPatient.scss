@@ -1,0 +1,41 @@
+@use "../../lib/styles/" as *;
+
+.AddPatient {
+	@include fitBox();
+	padding: $modalMargin;
+	background-color: white;
+	opacity: 0;
+}
+
+.AddPatient__container {
+	@include fitBox();
+	@include displayFlex(column);
+	.AddPatient__header-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background-color: black;
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 1rem 2rem;
+	}
+
+	.AddPatient__button-container {
+		@include displayFlex(row);
+		margin-top: auto;
+		padding: 1rem;
+		background-color: black;
+		gap: 1rem;
+		align-items: center;
+
+		.AddPatient__button {
+			font-size: 3rem;
+			white-space: nowrap;
+			width: 25rem;
+		}
+		.AddPatient__button--back {
+			margin-left: auto;
+		}
+	}
+}

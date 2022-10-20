@@ -1,0 +1,49 @@
+@use "../../lib/styles/" as *;
+
+.ViewAdmission {
+	@include fitBox();
+	padding: $modalMargin;
+	background-color: white;
+	opacity: 0;
+
+	.ViewAdmission__form-container {
+		gap: 6rem;
+	}
+}
+
+.ViewAdmission__container {
+	@include fitBox();
+	@include displayFlex(column);
+	.ViewAdmission__header-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background-color: black;
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 1rem 2rem;
+
+		.ViewAdmission__patient-title {
+			margin-left: auto;
+		}
+	}
+
+	.ViewAdmission__button-container {
+		@include displayFlex(row);
+		margin-top: auto;
+		padding: 1rem;
+		background-color: black;
+		gap: 1rem;
+		align-items: center;
+
+		.ViewAdmission__button {
+			font-size: 3rem;
+			white-space: nowrap;
+			width: 25rem;
+		}
+		.ViewAdmission__button--back {
+			margin-left: auto;
+		}
+	}
+}

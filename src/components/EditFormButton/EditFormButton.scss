@@ -1,0 +1,14 @@
+@use "../../lib/styles/" as *;
+
+.EditFormButton {
+	position: sticky;
+	bottom: 0;
+	align-self: flex-end;
+	@include displayFlex(row);
+	gap: 0.2rem;
+
+	.EditFormButton__button {
+		font-size: 2rem;
+		width: 10rem;
+	}
+}

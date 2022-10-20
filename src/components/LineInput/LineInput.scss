@@ -1,0 +1,26 @@
+@use "../../lib/styles/" as *;
+
+.LineInput {
+	position: relative;
+
+	.LineInput__icon {
+		position: absolute;
+		font-size: 2.5rem;
+		top: 2.1rem;
+		left: 2.1rem;
+	}
+	.LineInput__input {
+		@include textBoxPadding(1rem, 1rem);
+		padding-left: 8rem;
+		width: 100%;
+		font-size: 4rem;
+		outline: none;
+		border: none;
+		pointer-events: none;
+	}
+
+	.LineInput__input--editable {
+		border-bottom: 2px solid black;
+		pointer-events: all;
+	}
+}

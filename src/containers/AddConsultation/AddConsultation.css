@@ -1,0 +1,47 @@
+.AddConsultation {
+  height: 100%;
+  width: 100%;
+  padding: 3px;
+  background-color: white;
+  opacity: 0;
+}
+.AddConsultation .AddConsultation__form-container {
+  gap: 6rem;
+}
+
+.AddConsultation__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.AddConsultation__container .AddConsultation__header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 2rem;
+}
+.AddConsultation__container .AddConsultation__header-container .AddConsultation__patient-title {
+  margin-left: auto;
+}
+.AddConsultation__container .AddConsultation__button-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  padding: 1rem;
+  background-color: black;
+  gap: 1rem;
+  align-items: center;
+}
+.AddConsultation__container .AddConsultation__button-container .AddConsultation__button {
+  font-size: 3rem;
+  white-space: nowrap;
+  width: 25rem;
+}
+.AddConsultation__container .AddConsultation__button-container .AddConsultation__button--back {
+  margin-left: auto;
+}/*# sourceMappingURL=AddConsultation.css.map */

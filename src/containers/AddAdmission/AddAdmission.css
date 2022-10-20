@@ -1,0 +1,47 @@
+.AddAdmission {
+  height: 100%;
+  width: 100%;
+  padding: 3px;
+  background-color: white;
+  opacity: 0;
+}
+.AddAdmission .AddAdmission__form-container {
+  gap: 6rem;
+}
+
+.AddAdmission__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.AddAdmission__container .AddAdmission__header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 2rem;
+}
+.AddAdmission__container .AddAdmission__header-container .AddAdmission__patient-title {
+  margin-left: auto;
+}
+.AddAdmission__container .AddAdmission__button-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  padding: 1rem;
+  background-color: black;
+  gap: 1rem;
+  align-items: center;
+}
+.AddAdmission__container .AddAdmission__button-container .AddAdmission__button {
+  font-size: 3rem;
+  white-space: nowrap;
+  width: 25rem;
+}
+.AddAdmission__container .AddAdmission__button-container .AddAdmission__button--back {
+  margin-left: auto;
+}/*# sourceMappingURL=AddAdmission.css.map */

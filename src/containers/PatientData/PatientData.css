@@ -1,0 +1,98 @@
+.PatientData {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  padding: 0 2rem 2rem;
+}
+.PatientData .PatientData__overlay {
+  height: inherit;
+  width: inherit;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  background-color: black;
+}
+
+.PatientData__mid-container {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  color: white;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+.PatientData__mid-container .PatientData__patient-label {
+  font-size: 2rem;
+}
+.PatientData__mid-container .PatientData__patient {
+  padding: 0 2rem;
+  font-size: 3rem;
+  color: black;
+  background-color: white;
+}
+.PatientData__mid-container .PatientData__search {
+  margin-left: auto;
+}
+
+.PatientData__nav-container {
+  z-index: 2;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.PatientData__nav-container .PatientData__nav {
+  font-size: 3rem;
+  color: white;
+  font-weight: 1000;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 30rem;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.PatientData__nav-container .PatientData__nav--selected {
+  color: black;
+  background-color: white;
+  border-radius: 1.5rem;
+}
+
+.PatientData__data-container {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  padding-top: 0;
+  overflow: hidden;
+}
+.PatientData__data-container .PatientData__data {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.PatientData__button-container {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  padding-top: 1rem;
+}
+.PatientData__button-container .PatientData__button {
+  width: 25rem;
+  font-size: 1.8rem;
+}/*# sourceMappingURL=PatientData.css.map */

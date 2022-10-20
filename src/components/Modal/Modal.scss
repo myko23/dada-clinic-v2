@@ -1,0 +1,27 @@
+@use "../../lib/styles/" as *;
+
+.Modal {
+	@include fitBox();
+	@include displayFlex(row, true);
+	z-index: 1;
+	top: 0;
+	left: 0;
+	position: absolute;
+
+	.Modal__overlay {
+		@include fitBox();
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: grey;
+		opacity: 0;
+	}
+
+	.Modal__content-box {
+		z-index: 1;
+		// background-color: white;
+		@include displayFlex(row, true);
+		@include squareBox(90%);
+		box-shadow: $boxShadowDistinct;
+	}
+}

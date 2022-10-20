@@ -1,0 +1,22 @@
+.LineInput {
+  position: relative;
+}
+.LineInput .LineInput__icon {
+  position: absolute;
+  font-size: 2.5rem;
+  top: 2.1rem;
+  left: 2.1rem;
+}
+.LineInput .LineInput__input {
+  padding: 1rem 1rem;
+  padding-left: 8rem;
+  width: 100%;
+  font-size: 4rem;
+  outline: none;
+  border: none;
+  pointer-events: none;
+}
+.LineInput .LineInput__input--editable {
+  border-bottom: 2px solid black;
+  pointer-events: all;
+}/*# sourceMappingURL=LineInput.css.map */

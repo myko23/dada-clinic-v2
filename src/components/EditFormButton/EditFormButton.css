@@ -1,0 +1,13 @@
+.EditFormButton {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+}
+.EditFormButton .EditFormButton__button {
+  font-size: 2rem;
+  width: 10rem;
+}/*# sourceMappingURL=EditFormButton.css.map */

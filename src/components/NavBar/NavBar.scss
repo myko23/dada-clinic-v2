@@ -1,0 +1,33 @@
+@use "../../lib/styles/" as *;
+
+.NavBar {
+	@include displayFlex();
+	padding: 1rem 2rem 1rem 2rem;
+	align-items: center;
+	background-color: black;
+	width: 100%;
+	height: 7rem;
+	z-index: 1;
+	color: white;
+
+	.NavBar__header {
+		font-size: 5rem;
+		font-weight: 900;
+	}
+	.NavBar__user-container {
+		@include displayFlex(row);
+		gap: 2rem;
+		align-items: center;
+		margin-left: auto;
+
+		.NavBar__user-icon {
+			cursor: pointer;
+			font-size: 5rem;
+		}
+		.NavBar__user {
+			cursor: pointer;
+			font-size: 4rem;
+			font-weight: bold;
+		}
+	}
+}

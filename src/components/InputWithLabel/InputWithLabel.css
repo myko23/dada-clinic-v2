@@ -1,0 +1,59 @@
+.InputWithLabel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.InputWithLabel .InputWithLabel__label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.InputWithLabel .InputWithLabel__icon {
+  position: absolute;
+  color: black;
+  font-size: 4rem;
+  top: 4.5rem;
+  left: 1.5rem;
+}
+.InputWithLabel .InputWithLabel__input {
+  padding: 1rem 1rem;
+  padding-left: 8rem;
+  width: 100%;
+  font-size: 4rem;
+  outline: none;
+}
+
+.InputWithLabel--form .InputWithLabel__input {
+  border: none;
+  pointer-events: none;
+}
+.InputWithLabel--form .InputWithLabel__input--editable {
+  border-bottom: 2px solid black;
+  pointer-events: all;
+}
+
+.InputWithLabel--small {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.InputWithLabel--small .InputWithLabel__label {
+  font-size: 2rem;
+}
+.InputWithLabel--small .InputWithLabel__icon {
+  color: black;
+  font-size: 2.5rem;
+  top: 0.6rem;
+  left: 10rem;
+}
+.InputWithLabel--small .InputWithLabel__input {
+  border-radius: 1rem;
+  font-size: 2rem;
+  padding: 0.5rem 0.5rem 0.5rem 5rem;
+}/*# sourceMappingURL=InputWithLabel.css.map */

@@ -1,0 +1,59 @@
+.Table {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.Table__table {
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid white;
+}
+.Table__table .Table__header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.Table__table .Table__header--selected {
+  color: gold;
+}
+.Table__table .Table__row {
+  height: 5rem;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+.Table__table .Table__row:hover {
+  color: white;
+  background-color: grey;
+}
+.Table__table .Table__row--selected {
+  background-color: gold;
+}
+.Table__table .Table__row--selected:hover {
+  background-color: gold;
+  color: black;
+}
+.Table__table .Table__data {
+  font-size: 2.5rem;
+}
+
+.Table__header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.Table__header-content .Table__header-icon {
+  font-size: 3rem;
+}/*# sourceMappingURL=Table.css.map */

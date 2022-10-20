@@ -1,0 +1,17 @@
+@use "../../lib/styles/" as *;
+
+.PatientTitle {
+	@include displayFlex(row);
+	align-items: center;
+	gap: 2rem;
+
+	.PatientTitle__label {
+		font-size: 2rem;
+	}
+	.PatientTitle__name {
+		padding: 0 2rem;
+		font-size: 3rem;
+		color: black;
+		background-color: white;
+	}
+}

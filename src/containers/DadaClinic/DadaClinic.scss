@@ -1,0 +1,35 @@
+@use "../../lib/styles/" as *;
+
+.DadaClinic {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	.DadaClinic__patient-icon {
+		@include displayFlex(column, true);
+		@include squareBox(8rem);
+		gap: 0.5rem;
+		position: absolute;
+		background-color: white;
+		border: 3px solid black;
+		border-radius: 20%;
+		bottom: 5rem;
+		right: 5rem;
+		opacity: 0.5;
+		z-index: 1;
+		font-size: 4rem;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		.DadaClinic__patient-label {
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			font-weight: bold;
+			user-select: none;
+		}
+	}
+}

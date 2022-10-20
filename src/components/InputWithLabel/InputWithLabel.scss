@@ -1,0 +1,59 @@
+@use "../../lib/styles/" as *;
+
+.InputWithLabel {
+	@include displayFlex(column);
+	position: relative;
+
+	.InputWithLabel__label {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 2.5rem;
+		white-space: nowrap;
+		user-select: none;
+	}
+	.InputWithLabel__icon {
+		position: absolute;
+		color: black;
+		font-size: 4rem;
+		top: 4.5rem;
+		left: 1.5rem;
+	}
+	.InputWithLabel__input {
+		@include textBoxPadding(1rem, 1rem);
+		padding-left: 8rem;
+		width: 100%;
+		font-size: 4rem;
+		outline: none;
+	}
+}
+
+.InputWithLabel--form {
+	.InputWithLabel__input {
+		border: none;
+		pointer-events: none;
+	}
+	.InputWithLabel__input--editable {
+		border-bottom: 2px solid black;
+		pointer-events: all;
+	}
+}
+
+.InputWithLabel--small {
+	@include displayFlex(row);
+	gap: 1rem;
+	align-items: center;
+	.InputWithLabel__label {
+		font-size: 2rem;
+	}
+	.InputWithLabel__icon {
+		color: black;
+		font-size: 2.5rem;
+		top: 0.6rem;
+		left: 10rem;
+	}
+	.InputWithLabel__input {
+		border-radius: 1rem;
+		font-size: 2rem;
+		padding: 0.5rem 0.5rem 0.5rem 5rem;
+	}
+}

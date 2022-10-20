@@ -1,0 +1,19 @@
+@use "../../lib/styles/" as *;
+
+.ModalTitle {
+	@include displayFlex(row);
+	align-items: center;
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: $modalMargin $modalMargin 0 $modalMargin;
+
+	.ModalTitle__header-icon {
+		font-size: 3rem;
+	}
+	.ModalTitle__header {
+		font-size: 4rem;
+		margin-left: 2rem;
+	}
+}

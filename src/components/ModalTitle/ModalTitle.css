@@ -1,0 +1,17 @@
+.ModalTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 3px 3px 0 3px;
+}
+.ModalTitle .ModalTitle__header-icon {
+  font-size: 3rem;
+}
+.ModalTitle .ModalTitle__header {
+  font-size: 4rem;
+  margin-left: 2rem;
+}/*# sourceMappingURL=ModalTitle.css.map */

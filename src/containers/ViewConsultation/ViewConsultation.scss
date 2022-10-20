@@ -1,0 +1,49 @@
+@use "../../lib/styles/" as *;
+
+.ViewConsultation {
+	@include fitBox();
+	padding: $modalMargin;
+	background-color: white;
+	opacity: 0;
+
+	.ViewConsultation__form-container {
+		gap: 6rem;
+	}
+}
+
+.ViewConsultation__container {
+	@include fitBox();
+	@include displayFlex(column);
+	.ViewConsultation__header-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background-color: black;
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 1rem 2rem;
+
+		.ViewConsultation__patient-title {
+			margin-left: auto;
+		}
+	}
+
+	.ViewConsultation__button-container {
+		@include displayFlex(row);
+		margin-top: auto;
+		padding: 1rem;
+		background-color: black;
+		gap: 1rem;
+		align-items: center;
+
+		.ViewConsultation__button {
+			font-size: 3rem;
+			white-space: nowrap;
+			width: 25rem;
+		}
+		.ViewConsultation__button--back {
+			margin-left: auto;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+@use "../../lib/styles/" as *;
+
+.Table {
+	@include fitBox();
+	overflow-y: auto;
+}
+
+.Table__table {
+	@include fitBox();
+	border-collapse: collapse;
+	border: 3px solid white;
+
+	.Table__header {
+		position: sticky;
+		top: 0;
+		font-size: 4.5rem;
+		text-transform: uppercase;
+		color: white;
+		background-color: black;
+		cursor: pointer;
+		user-select: none;
+	}
+
+	.Table__header--selected {
+		color: gold;
+	}
+
+	.Table__row {
+		height: 5rem;
+		border-bottom: 1px solid black;
+		cursor: pointer;
+		&:hover {
+			color: white;
+			background-color: grey;
+		}
+	}
+
+	.Table__row--selected {
+		background-color: gold;
+
+		&:hover {
+			background-color: gold;
+			color: black;
+		}
+	}
+
+	.Table__data {
+		font-size: 2.5rem;
+	}
+}
+
+.Table__header-content {
+	@include displayFlex(row, true);
+	gap: 1.5rem;
+
+	.Table__header-icon {
+		font-size: 3rem;
+	}
+}
