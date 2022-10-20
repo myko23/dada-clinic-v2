@@ -32,6 +32,18 @@
 		color: black;
 		background-color: white;
 	}
+	.PatientData__patient-status {
+		font-size: 3rem;
+		font-weight: 1000;
+		color: black;
+		background-color: gold;
+		width: 20rem;
+		text-align: center;
+		border-radius: 2rem;
+		margin-left: 10rem;
+		padding: 0 2rem;
+		user-select: none;
+	}
 	.PatientData__search {
 		margin-left: auto;
 	}
@@ -55,6 +67,7 @@
 		width: 30rem;
 		text-align: center;
 		user-select: none;
+		padding: 0 2rem;
 	}
 	.PatientData__nav--selected {
 		color: black;

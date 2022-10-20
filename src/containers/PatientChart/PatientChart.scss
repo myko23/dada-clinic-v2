@@ -2,6 +2,7 @@
 
 .PatientChart {
 	@include fitBox();
+	@include displayFlex(column);
 	overflow: hidden;
 	background-color: white;
 	opacity: 0;

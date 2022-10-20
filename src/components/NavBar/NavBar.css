@@ -12,6 +12,7 @@
 .NavBar .NavBar__header {
   font-size: 5rem;
   font-weight: 900;
+  white-space: nowrap;
 }
 .NavBar .NavBar__user-container {
   display: flex;
@@ -28,4 +29,5 @@
   cursor: pointer;
   font-size: 4rem;
   font-weight: bold;
+  white-space: nowrap;
 }/*# sourceMappingURL=NavBar.css.map */

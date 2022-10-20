@@ -100,6 +100,7 @@ const PatientData = () => {
 			</div>
 			<div className="PatientData__mid-container">
 				<PatientTitle patient="Eric Bacal" />
+				<div className="PatientData__patient-status">Admitted</div>
 				{dataViewState !== "General" && (
 					<InputWithLabel
 						className="PatientData__search"

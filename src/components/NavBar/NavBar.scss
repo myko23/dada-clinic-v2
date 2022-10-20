@@ -13,6 +13,7 @@
 	.NavBar__header {
 		font-size: 5rem;
 		font-weight: 900;
+		white-space: nowrap;
 	}
 	.NavBar__user-container {
 		@include displayFlex(row);
@@ -28,6 +29,7 @@
 			cursor: pointer;
 			font-size: 4rem;
 			font-weight: bold;
+			white-space: nowrap;
 		}
 	}
 }
