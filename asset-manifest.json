@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dada-clinic-v2/static/css/main.07f08cf2.css",
+    "main.js": "/dada-clinic-v2/static/js/main.21cb48de.js",
+    "static/js/787.44af7b5b.chunk.js": "/dada-clinic-v2/static/js/787.44af7b5b.chunk.js",
+    "static/media/login-background.webp": "/dada-clinic-v2/static/media/login-background.4dd5b1a1768e34adf4e7.webp",
+    "index.html": "/dada-clinic-v2/index.html",
+    "main.07f08cf2.css.map": "/dada-clinic-v2/static/css/main.07f08cf2.css.map",
+    "main.21cb48de.js.map": "/dada-clinic-v2/static/js/main.21cb48de.js.map",
+    "787.44af7b5b.chunk.js.map": "/dada-clinic-v2/static/js/787.44af7b5b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07f08cf2.css",
+    "static/js/main.21cb48de.js"
+  ]
+}
