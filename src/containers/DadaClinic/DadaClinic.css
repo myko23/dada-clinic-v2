@@ -34,4 +34,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.DadaClinic .DadaClinic_patient-icon--opaque {
+  opacity: 1;
 }/*# sourceMappingURL=DadaClinic.css.map */

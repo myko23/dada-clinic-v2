@@ -12,6 +12,7 @@ import {
 	faCalendarDay,
 	faClock,
 	faFlaskVial,
+	faNotesMedical,
 	faO,
 	faP,
 	faS,
@@ -56,6 +57,15 @@ const ViewConsultation = () => {
 							icon={faClock}
 							width="15rem"
 							editState={false}
+						/>
+					</div>
+					<div className="form-row">
+						<InputWithLabel
+							variant="form"
+							label="Chief Complaint"
+							icon={faNotesMedical}
+							width="100%"
+							editState={editState}
 						/>
 					</div>
 					<div className="form-row--multilined">
@@ -117,12 +127,6 @@ const ViewConsultation = () => {
 					/>
 				</div>
 				<div className="ViewConsultation__button-container">
-					<SquareButton className="ViewConsultation__button">
-						Add Patient
-					</SquareButton>
-					<SquareButton className="ViewConsultation__button">
-						Reset
-					</SquareButton>
 					<SquareButton
 						className="ViewConsultation__button ViewConsultation__button--back"
 						onClick={() => setModalView(dispatch)("default")}

@@ -29,7 +29,7 @@ const EditFormButton = ({ onSave, onReset, editConfigs }) => {
 						className="EditFormButton__button"
 						onClick={() => {
 							setEditState(false);
-							onSave();
+							onReset();
 						}}
 					>
 						Reset

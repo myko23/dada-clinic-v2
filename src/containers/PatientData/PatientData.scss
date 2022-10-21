@@ -12,6 +12,16 @@
 		@include BaseOverlay(0.9);
 		background-color: black;
 	}
+
+	.PatientData__overlay--front {
+		z-index: 3;
+		@include displayFlex(row, true);
+		.PatientData__overlay-text {
+			color: white;
+			font-size: 5rem;
+			font-weight: 1000;
+		}
+	}
 }
 
 .PatientData__mid-container {

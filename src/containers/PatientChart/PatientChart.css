@@ -29,4 +29,22 @@
 }
 .PatientChart .PatientChart__header-container .PatientChart__search {
   margin-left: auto;
+}
+.PatientChart .PatientChart__button-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  padding: 1rem;
+  background-color: black;
+  margin: 3px 3px 0 3px;
+  gap: 1rem;
+  align-items: center;
+}
+.PatientChart .PatientChart__button-container .PatientChart__button {
+  font-size: 3rem;
+  white-space: nowrap;
+  width: 25rem;
+}
+.PatientChart .PatientChart__button-container .PatientChart__button--back {
+  margin-left: auto;
 }/*# sourceMappingURL=PatientChart.css.map */

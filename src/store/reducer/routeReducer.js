@@ -4,12 +4,17 @@ const slice = createSlice({
 	name: "route",
 	initialState: {
 		login: false,
-		dataView: "Consultation",
+		dataView: "General",
 		modalView: "default",
 	},
 	reducers: {
 		appLogin: (route, action) => {
 			route.login = action.payload;
+		},
+		userReset: (route, action) => {
+			route.login = false;
+			route.dataView = "General";
+			route.modalView = "default";
 		},
 		dataViewSet: (route, action) => {
 			route.dataView = action.payload;
@@ -21,10 +26,14 @@ const slice = createSlice({
 });
 
 export default slice.reducer;
-const { appLogin, dataViewSet, modalViewSet } = slice.actions;
+const { appLogin, userReset, dataViewSet, modalViewSet } = slice.actions;
 
-export const loginApp = (dispatch) => (login) => {
-	dispatch(appLogin(login));
+export const loginApp = (dispatch) => {
+	dispatch(appLogin(true));
+};
+export const lougoutApp = (dispatch) => {
+	dispatch(userReset());
+	dispatch(appLogin(false));
 };
 
 export const setDataView = (dispatch) => (dataView) => {

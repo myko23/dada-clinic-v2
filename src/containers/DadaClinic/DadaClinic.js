@@ -15,11 +15,14 @@ import { getRouteState, setModalView } from "../../store/reducer/routeReducer";
 import ViewAdmission from "../ViewAdmissions/ViewAdmission";
 import AddConsultation from "../AddConsultation/AddConsultation";
 import AddAdmission from "../AddAdmission/AddAdmission";
+import cls from "classnames";
+import { getSelectedState } from "../../store/reducer/selectedReducer";
 
 const DadaClinic = () => {
 	const dispatch = useDispatch();
-	const { login: loginState } = useSelector(getRouteState);
-	const { modalView: modalViewState } = useSelector(getRouteState);
+	const { login: loginState, modalView: modalViewState } =
+		useSelector(getRouteState);
+	const { patient: selectedpatient } = useSelector(getSelectedState);
 
 	const renderLoginState = () => {
 		if (loginState)
@@ -30,7 +33,11 @@ const DadaClinic = () => {
 						drag
 						dragConstraints={{ right: 50, bottom: 50 }}
 						dragMomentum={0}
-						className="DadaClinic__patient-icon"
+						className={cls(
+							"DadaClinic__patient-icon",
+							!selectedpatient &&
+								"DadaClinic_patient-icon--opaque"
+						)}
 						whileTap={{ scale: 0.9 }}
 						onDoubleClick={() =>
 							setModalView(dispatch)("PatientsChart")

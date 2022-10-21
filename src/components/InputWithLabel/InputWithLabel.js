@@ -13,6 +13,8 @@ const InputWithLabel = ({
 	icon,
 	width = "100%",
 	editState = true,
+	value,
+	setValue,
 }) => {
 	return (
 		<div
@@ -33,6 +35,8 @@ const InputWithLabel = ({
 				/>
 			) : null}
 			<input
+				value={value}
+				onChange={(e) => setValue(e.target.value)}
 				type={type}
 				className={cls(
 					"InputWithLabel__input",

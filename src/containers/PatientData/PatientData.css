@@ -18,6 +18,18 @@
   z-index: 0;
   background-color: black;
 }
+.PatientData .PatientData__overlay--front {
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.PatientData .PatientData__overlay--front .PatientData__overlay-text {
+  color: white;
+  font-size: 5rem;
+  font-weight: 1000;
+}
 
 .PatientData__mid-container {
   z-index: 1;

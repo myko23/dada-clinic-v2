@@ -1,32 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import Table from "../../components/Table/Table";
 import "./PatientChart.css";
-import { patientData } from "../../data/patientData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import InputWithLabel from "../../components/InputWithLabel/InputWithLabel";
 import { motion } from "framer-motion";
 import ModalTitle from "../../components/ModalTitle/ModalTitle";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setModalView } from "../../store/reducer/routeReducer";
+import SquareButton from "../../components/SquareButton/SquareButton";
+import { useFetchQuery } from "../../lib/hooks/useFetchQuery";
+import moment from "moment/moment";
+import {
+	getSelectedState,
+	setSelected,
+} from "../../store/reducer/selectedReducer";
 
 const PatientChart = () => {
 	const dispatch = useDispatch();
+	const patientData = useFetchQuery(["patients"]);
 
-	const admissionSettings = {
+	const { patient: patientSelected } = useSelector(getSelectedState);
+
+	const [search, setSearch] = useState("");
+
+	const patientSettings = {
 		data: patientData,
 		datamap: {
-			dislikes: "DisAdmit",
-			birthday: "DisDay",
-			status: "Distats",
-			likes: "DisLikes",
+			title: "Name",
+			birthday: "birthday",
+			age: "age",
 		},
 		datasettings: {
-			likes: (value) => {
-				return value + "Hey";
+			title: ({ firstname, lastname }) => {
+				return `${firstname} ${lastname}`;
+			},
+			age: (value) => {
+				return moment(value.birthday).fromNow(true);
+			},
+			birthday: ({ birthday }) => {
+				return moment(birthday).format("MMMM DD, YYYY");
 			},
 		},
 	};
+
 	return (
 		<motion.div
 			animate={{ opacity: 1 }}
@@ -50,20 +67,28 @@ const PatientChart = () => {
 					icon={faSearch}
 					variant="small"
 					width="40rem"
+					value={search}
+					setValue={setSearch}
 				/>
 			</div>
 			<Table
-				data={admissionSettings.data}
-				datamap={admissionSettings.datamap}
-				datasettings={admissionSettings.datasettings}
-				onSort={(column) => {
-					console.log(column);
-				}}
+				data={patientSettings.data}
+				datamap={patientSettings.datamap}
+				datasettings={patientSettings.datasettings}
 				onItemClick={(id) => {
-					console.log(id);
+					setSelected(dispatch)("patient", id);
 				}}
-				selected={1}
+				selected={patientSelected}
+				search={search}
 			/>
+			<div className="PatientChart__button-container">
+				<SquareButton
+					className="PatientChart__button PatientChart__button--back"
+					onClick={() => setModalView(dispatch)("default")}
+				>
+					Back
+				</SquareButton>
+			</div>
 		</motion.div>
 	);
 };

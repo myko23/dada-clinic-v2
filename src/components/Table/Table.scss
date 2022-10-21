@@ -6,9 +6,10 @@
 }
 
 .Table__table {
-	@include fitBox();
+	width: 100%;
 	border-collapse: collapse;
 	border: 3px solid white;
+	border-bottom: 1px solid black;
 
 	.Table__header {
 		position: sticky;
@@ -19,6 +20,16 @@
 		background-color: black;
 		cursor: pointer;
 		user-select: none;
+
+		.Table__header-content {
+			@include displayFlex(row);
+
+			gap: 1.5rem;
+
+			.Table__header-icon {
+				font-size: 3rem;
+			}
+		}
 	}
 
 	.Table__header--selected {
@@ -46,14 +57,5 @@
 
 	.Table__data {
 		font-size: 2.5rem;
-	}
-}
-
-.Table__header-content {
-	@include displayFlex(row, true);
-	gap: 1.5rem;
-
-	.Table__header-icon {
-		font-size: 3rem;
 	}
 }

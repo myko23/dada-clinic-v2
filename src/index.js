@@ -6,16 +6,29 @@ import "./lib/styles/global/form.css";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import configureStore from "./store/configureStore";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { CookiesProvider } from "react-cookie";
 
 const store = configureStore();
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			refetchOnWindowFocus: false,
+		},
+	},
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<Provider store={store}>
-		<React.StrictMode>
-			<App />
-		</React.StrictMode>
-	</Provider>
+	<CookiesProvider>
+		<QueryClientProvider client={queryClient}>
+			<Provider store={store}>
+				<React.StrictMode>
+					<App />
+				</React.StrictMode>
+			</Provider>
+		</QueryClientProvider>
+	</CookiesProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -11,6 +11,7 @@ import {
 	faCalendarDay,
 	faClock,
 	faFlaskVial,
+	faNotesMedical,
 	faO,
 	faP,
 	faS,
@@ -46,6 +47,7 @@ const AddAdmission = () => {
 							width="50rem"
 						/>
 					</div>
+
 					<div className="form-row">
 						<InputWithLabel
 							variant="form"
@@ -53,6 +55,14 @@ const AddAdmission = () => {
 							icon={faClock}
 							width="15rem"
 							editState={false}
+						/>
+					</div>
+					<div className="form-row">
+						<InputWithLabel
+							variant="form"
+							label="Chief Complaint"
+							icon={faNotesMedical}
+							width="100%"
 						/>
 					</div>
 					<div className="form-row--multilined">
@@ -105,8 +115,11 @@ const AddAdmission = () => {
 					</div>
 				</div>
 				<div className="AddAdmission__button-container">
-					<SquareButton className="AddAdmission__button">
-						Add Patient
+					<SquareButton
+						className="AddAdmission__button"
+						width="30rem"
+					>
+						Add Admission
 					</SquareButton>
 					<SquareButton className="AddAdmission__button">
 						Reset

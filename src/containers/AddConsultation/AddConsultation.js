@@ -12,6 +12,7 @@ import {
 	faCalendarDay,
 	faClock,
 	faFlaskVial,
+	faNotesMedical,
 	faO,
 	faP,
 	faS,
@@ -45,6 +46,14 @@ const AddConsultation = () => {
 							icon={faClock}
 							width="15rem"
 							editState={false}
+						/>
+					</div>
+					<div className="form-row">
+						<InputWithLabel
+							variant="form"
+							label="Chief Complaint"
+							icon={faNotesMedical}
+							width="100%"
 						/>
 					</div>
 					<div className="form-row--multilined">
@@ -97,8 +106,11 @@ const AddConsultation = () => {
 					</div>
 				</div>
 				<div className="AddConsultation__button-container">
-					<SquareButton className="AddConsultation__button">
-						Add Patient
+					<SquareButton
+						className="AddConsultation__button"
+						width="40rem"
+					>
+						Add Consultation
 					</SquareButton>
 					<SquareButton className="AddConsultation__button">
 						Reset

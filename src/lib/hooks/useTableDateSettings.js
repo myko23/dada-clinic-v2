@@ -1,11 +1,12 @@
 import _ from "lodash";
 
 const useTableDateSettings = (
-	data,
-	datamap,
-	datasettings,
+	data = [],
+	datamap = {},
+	datasettings = {},
 	sortItem,
-	sortOrder = "asc"
+	sortOrder = "asc",
+	search = ""
 ) => {
 	let headers = Object.values(datamap).map((item) => item);
 	headers = ["_id", ...headers];
@@ -20,15 +21,27 @@ const useTableDateSettings = (
 		return newObject;
 	});
 
-	const formattedData = newData.map((item) => {
+	data.forEach((item, index) => {
 		Object.keys(datasettings).forEach((next) => {
-			if (item[next]) item[next] = datasettings[next](item[next]);
+			newData[index][next] = datasettings[next](item);
 		});
-
-		return item;
 	});
 
-	const sortedData = _.orderBy(formattedData, sortItem, [sortOrder]);
+	const searchData = newData.filter((item) => {
+		let counter = false;
+		Object.values(item).forEach((next, index) => {
+			if (
+				index !== 0 &&
+				next?.toString().toLowerCase().includes(search.toLowerCase())
+			) {
+				return (counter = true);
+			}
+		});
+		if (counter === true) return item;
+		else return null;
+	});
+
+	const sortedData = _.orderBy(searchData, [sortItem], [sortOrder]);
 
 	return {
 		headers,

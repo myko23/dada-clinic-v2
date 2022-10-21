@@ -30,4 +30,22 @@
 			margin-left: auto;
 		}
 	}
+	.PatientChart__button-container {
+		@include displayFlex(row);
+		margin-top: auto;
+		padding: 1rem;
+		background-color: black;
+		margin: 3px 3px 0 3px;
+		gap: 1rem;
+		align-items: center;
+
+		.PatientChart__button {
+			font-size: 3rem;
+			white-space: nowrap;
+			width: 25rem;
+		}
+		.PatientChart__button--back {
+			margin-left: auto;
+		}
+	}
 }

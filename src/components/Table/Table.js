@@ -14,6 +14,7 @@ const Table = ({
 	onSort,
 	className,
 	selected,
+	search = "",
 }) => {
 	const [sortItem, setSortItem] = useState("_id");
 	const [sortOrder, setSortOrder] = useState("asc");
@@ -23,7 +24,8 @@ const Table = ({
 		datamap,
 		datasettings,
 		sortItem,
-		sortOrder
+		sortOrder,
+		search
 	);
 
 	const renderHeader = () => {
@@ -47,7 +49,8 @@ const Table = ({
 									setSortItem(
 										Object.keys(datamap)[index - 1]
 									);
-									onSort(Object.keys(datamap)[index - 1]);
+									onSort &&
+										onSort(Object.keys(datamap)[index - 1]);
 								}}
 							>
 								<motion.div

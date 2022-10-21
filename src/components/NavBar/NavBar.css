@@ -8,6 +8,7 @@
   height: 7rem;
   z-index: 1;
   color: white;
+  z-index: 2;
 }
 .NavBar .NavBar__header {
   font-size: 5rem;
@@ -20,6 +21,7 @@
   gap: 2rem;
   align-items: center;
   margin-left: auto;
+  position: relative;
 }
 .NavBar .NavBar__user-container .NavBar__user-icon {
   cursor: pointer;
@@ -30,4 +32,34 @@
   font-size: 4rem;
   font-weight: bold;
   white-space: nowrap;
+}
+
+.NavBar__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: -5rem;
+  right: 1rem;
+  width: 70%;
+  border: 3px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+.NavBar__menu:hover {
+  color: gold;
+}
+.NavBar__menu .NavBar__menu-icon {
+  font-size: 2rem;
+}
+.NavBar__menu .NavBar__menu-item {
+  font-size: 2.5rem;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
 }/*# sourceMappingURL=NavBar.css.map */
